@@ -30,7 +30,7 @@ This project demonstrates how to deploy a Python application on **AWS EC2** usin
    - Jenkins
    - Git
    - SSH keys (added to Jenkins credentials)
-     ![AWS DASHBOARD](cred.png)
+     ![AWS DASHBOARD](Images/cred.png)
 
 
 3. Installed on App Server:
@@ -72,7 +72,7 @@ The CI/CD pipeline is defined in the `Jenkinsfile`:
 
 http://<APP_SERVER_PUBLIC_IP>:5000
 
- ![AWS DASHBOARD](output.png)
+ ![AWS DASHBOARD](Images/output.png)
 
 ---
 
