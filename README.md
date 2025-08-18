@@ -5,17 +5,20 @@ This project demonstrates how to deploy a Python application on **AWS EC2** usin
 ---
 
 ## 🚀 Architecture
-- **Server 1 (Jenkins Server)**  
-  - Runs Jenkins.  
-  - Pulls source code from GitHub.  
-  - Deploys application to remote EC2 server via SSH.  
+- **Server 1 (Jenkins Server)**
+  - Runs Jenkins.
+  - Pulls source code from GitHub.
+  - Deploys application to remote EC2 server via SSH.
+  ![JENKINS DASHBOARD](Images/jenkins-dashboard.png)
 
-- **Server 2 (App Server)**  
-  - Runs the Python application.  
-  - Receives code and dependencies from Jenkins.  
 
-- **GitHub**  
-  - Stores the application code and Jenkins pipeline (`Jenkinsfile`).  
+
+- **Server 2 (App Server)**
+  - Runs the Python application.
+  - Receives code and dependencies from Jenkins.
+
+- **GitHub**
+  - Stores the application code and Jenkins pipeline (`Jenkinsfile`).
 
 ---
 
