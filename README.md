@@ -77,8 +77,6 @@ http://<APP_SERVER_PUBLIC_IP>:5000
 ---
 
 ## 📂 Project Structure
-
-
 .
 ├── app.py # Main Python app
 ├── requirements.txt # Python dependencies
