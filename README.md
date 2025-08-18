@@ -8,7 +8,8 @@ This project demonstrates how to deploy a Python application on **AWS EC2** usin
 - **Server 1 (Jenkins Server)**
   - Runs Jenkins.
   - Pulls source code from GitHub.
-  - Deploys application to remote EC2 server via SSH.
+  - Deploys application to remote EC2 server via SSH.  
+
   ![JENKINS DASHBOARD](Images/jenkins-dashboard.png)
 
 - **Server 2 (App Server)**
@@ -23,15 +24,16 @@ This project demonstrates how to deploy a Python application on **AWS EC2** usin
 ## 🛠️ Prerequisites
 1. Two AWS EC2 instances:
    - **Jenkins Server** (Ubuntu 22.04 recommended).
-   - **Python App Server** (Ubuntu 22.04 with Python 3.12+).
+   - **Python App Server** (Ubuntu 22.04 with Python 3.12+).  
+
    ![AWS DASHBOARD](Images/aws-dashboard.png)
 
 2. Installed on Jenkins Server:
    - Jenkins
    - Git
-   - SSH keys (added to Jenkins credentials)
-     ![AWS DASHBOARD](Images/cred.png)
+   - SSH keys (added to Jenkins credentials)  
 
+   ![JENKINS CREDENTIALS](Images/cred.png)
 
 3. Installed on App Server:
    - Python 3.12+
@@ -72,24 +74,24 @@ The CI/CD pipeline is defined in the `Jenkinsfile`:
 
 http://<APP_SERVER_PUBLIC_IP>:5000
 
- ![AWS DASHBOARD](Images/output.png)
+
+![APP OUTPUT](Images/output.png)
 
 ---
 
 ## 📂 Project Structure
+```plaintext
 .
-├── app.py # Main Python app
-├── requirements.txt # Python dependencies
-├── Dockerfile # (Optional) Docker setup
-├── Jenkinsfile # CI/CD pipeline
-├── README.md # Documentation
-└── test/ # Tests
+├── app.py              # Main Python app
+├── requirements.txt    # Python dependencies
+├── Dockerfile          # (Optional) Docker setup
+├── Jenkinsfile         # CI/CD pipeline
+├── README.md           # Documentation
+└── test/               # Tests
+📝 Notes
 
----
+Each deployment uses nohup to run the app in the background.
 
-## 📝 Notes
-- Each deployment uses `nohup` to run the app in the background.  
-- You may want to use `systemd` or `Docker` for production deployments.  
-- Ensure old processes are cleaned up if re-running multiple times.  
+You may want to use systemd or Docker for production deployments.
 
----
+Ensure old processes are cleaned up if re-running multiple times.
