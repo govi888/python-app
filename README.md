@@ -11,8 +11,6 @@ This project demonstrates how to deploy a Python application on **AWS EC2** usin
   - Deploys application to remote EC2 server via SSH.
   ![JENKINS DASHBOARD](Images/jenkins-dashboard.png)
 
-
-
 - **Server 2 (App Server)**
   - Runs the Python application.
   - Receives code and dependencies from Jenkins.
@@ -25,18 +23,21 @@ This project demonstrates how to deploy a Python application on **AWS EC2** usin
 ## 🛠️ Prerequisites
 1. Two AWS EC2 instances:
    - **Jenkins Server** (Ubuntu 22.04 recommended).
-   - **Python App Server** (Ubuntu 22.04 with Python 3.12+).  
+   - **Python App Server** (Ubuntu 22.04 with Python 3.12+).
+   ![AWS DASHBOARD](Images/aws-dashboard.png)
 
 2. Installed on Jenkins Server:
-   - Jenkins  
-   - Git  
-   - SSH keys (added to Jenkins credentials)  
+   - Jenkins
+   - Git
+   - SSH keys (added to Jenkins credentials)
+     ![AWS DASHBOARD](cred.png)
+
 
 3. Installed on App Server:
-   - Python 3.12+  
-   - `python3-pip`, `python3-venv`  
-   - OpenSSH (`openssh-server`, `openssh-client`)  
-   - Security group opened for app port (e.g., 5000)  
+   - Python 3.12+
+   - `python3-pip`, `python3-venv`
+   - OpenSSH (`openssh-server`, `openssh-client`)
+   - Security group opened for app port (e.g., 5000)
 
 ---
 
@@ -71,6 +72,7 @@ The CI/CD pipeline is defined in the `Jenkinsfile`:
 
 http://<APP_SERVER_PUBLIC_IP>:5000
 
+ ![AWS DASHBOARD](output.png)
 
 ---
 
